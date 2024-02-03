@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <title>Agenzia Viaggi</title>
+
+    <style>
+       #carouselExampleIndicators{ max-width: 800px; /* Imposta la larghezza massima desiderata */
+  margin: auto; /* Centra il carosello sulla pagina */
+}
+
+/* Riduci l'altezza del carosello */
+#carouselExampleIndicators .carousel-inner {
+  max-height: 800px; /* Imposta l'altezza massima desiderata */
+}
+
+/* Riduci le dimensioni delle immagini all'interno del carosello */
+#carouselExampleIndicators img {
+  max-width: 100%; /* Assicurati che le immagini non superino la larghezza del carosello */
+  height: auto; /* Mantiene l'aspetto proporzionato delle immagini */
+}
+    </style>
+</head>
+<body>
+            <!--navbar-->
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="img/logo.jpg" alt="logo" width="80" style="border-radius: 20px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="prezzi.html">Prezzi</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link"href="contatti.html">Contatti</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Destinazioni
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="tokio.html" > Tokio</a></li>
+                        <li><a class="dropdown-item" href="kyoto.html">Kyoto</a></li>
+                        <li><a class="dropdown-item" href="nara.html">Nara</a></li>
+                        <li><a class="dropdown-item" href="osaka.html">Osaka</a></li>
+
+                      </ul>
+                    </li>
+      
+                  </ul>
+                </div>
+              </div>
+                          <!--tasto chiamami-->
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#prenotazioneModal">
+                              Chiamami
+                          </button>
+                          
+                          <!-- Modal -->
+                          <div class="modal fade" id="prenotazioneModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel">Vorresti Essere Contatto?</h5>
+                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <!-- Form per le prenotazioni -->
+                                      <form>
+                                          <div class="modal-body">
+                                              <div class="mb-3">
+                                                  <label for="nome" class="form-label">Nome</label>
+                                                  <input type="text" class="form-control" id="nome" required>
+                                              </div>
+                                              <div class="mb-3">
+                                                  <label for="email" class="form-label">Email</label>
+                                                  <input type="email" class="form-control" id="email" required>
+                                              </div>
+                                              <div class="mb-3">
+                                                  <label for="numero" class="form-label">Numero di telefono</label>
+                                                  <input type="tel" class="form-control" id="numero" required>
+                                              </div>
+                                              <!-- Aggiungi altri campi del form se necessario -->
+                                          </div>
+                                          <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                                              <button type="submit" class="btn btn-primary">Chiamami !</button>
+                                          </div>
+                                      </form>
+                                  </div>
+                              </div>
+                          </div>
+                          <!--fine tasto bottone-->
+            </nav>
+
+
+      <!--carosello-->
+
+
+      <div id="carouselExampleIndicators" class="carousel slide mt-5" >
+        <div class="carousel-indicators" >
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/carosello1.jpg" class="d-block w-100" alt="giappone">
+          </div>
+          <div class="carousel-item">
+            <img src="img/carosello2.jpg" class="d-block w-100" alt="giappone">
+          </div>
+          <div class="carousel-item">
+            <img src="img/carosello3.jpg" class="d-block w-100" alt="giappone">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!--fine carosello-->
+
+
+      <!--introduzione-->
+     <div class="container text-center">
+        <h1 class="text-center p-5 mb-5 mt-5">Tour Giappone </h1>
+
+        <div class="w-100 bg-dark-subtle p-5 mb-5">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, obcaecati id. Vitae architecto fugit reprehenderit harum cumque aperiam dicta corporis, molestias soluta quidem maiores eos praesentium repellat porro? Accusamus, libero?
+            </p>
+                                <!--tasto chiamami-->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#prenotazioneModal">
+                                  Prenota adesso il tuo viaggio
+                              </button>
+                              
+                              <!-- Modal -->
+                              <div class="modal fade" id="prenotazioneModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                      <div class="modal-content">
+                                          <div class="modal-header">
+                                              <h5 class="modal-title" id="exampleModalLabel">Vorresti Essere Contatto?</h5>
+                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                          </div>
+                                          <!-- Form per le prenotazioni -->
+                                          <form>
+                                              <div class="modal-body">
+                                                  <div class="mb-3">
+                                                      <label for="nome" class="form-label">Nome</label>
+                                                      <input type="text" class="form-control" id="nome" required>
+                                                  </div>
+                                                  <div class="mb-3">
+                                                      <label for="email" class="form-label">Email</label>
+                                                      <input type="email" class="form-control" id="email" required>
+                                                  </div>
+                                                  <div class="mb-3">
+                                                      <label for="numero" class="form-label">Numero di telefono</label>
+                                                      <input type="tel" class="form-control" id="numero" required>
+                                                  </div>
+                                                  <!-- Aggiungi altri campi del form se necessario -->
+                                              </div>
+                                              <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                                                  <button type="submit" class="btn btn-primary">Chiamami !</button>
+                                              </div>
+                                          </form>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!--fine tasto bottone-->
+          
+        </div>
+    </div>
+
+        <!--inizio card destinazioni-->
+
+        <h1 id="ilviaggio" class="text-center p-5 mb-5 mt-5">Le Destinazioni</h1>
+
+
+        <div class="row">
+            <div class="col">
+
+                <div class="card" >
+                    <img src="img/tokio.jpg" class="card-img-top" alt="tokio">
+                    <div class="card-body">
+                      <h5 class="card-title">Tokio</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, delectus vitae! Laborum ipsam tempora fugit officiis illo? Expedita, repudiandae enim?</p>
+                      <a href="tokio.html" class="btn btn-primary">scopri di più</a>
+                    </div>
+                  </div>
+
+
+            </div>
+            <div class="col">
+
+                <div class="card" >
+                    <img src="img/kyoto.jpg" class="card-img-top" alt="kyoto">
+                    <div class="card-body">
+                      <h5 class="card-title">Kyoto</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat porro totam delectus possimus odit illo consectetur quis vitae debitis commodi!.</p>
+                      <a href="kyoto.html" class="btn btn-primary">scopri di più</a>
+                    </div>
+                  </div>
+
+
+            </div>
+
+            <div class="col">
+
+                <div class="card" >
+                    <img src="img/nara.jpg" class="card-img-top" alt="nara">
+                    <div class="card-body">
+                      <h5 class="card-title">Nara</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates labore velit ad nisi blanditiis molestias! Necessitatibus corporis rerum quis repudiandae!</p>
+                      <a href="nara.html" class="btn btn-primary">scopri di più</a>
+                    </div>
+                  </div>
+
+
+            </div>
+
+            <div class="col">
+
+                <div class="card" >
+                    <img src="img/osaka.jpg" class="card-img-top" alt="osaka">
+                    <div class="card-body">
+                      <h5 class="card-title">Osaka</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti reprehenderit repellat ipsa corrupti quas esse, consequuntur aliquam nisi quo impedit?</p>
+                      <a href="osaka.html" class="btn btn-primary">scopri di più</a>
+                    </div>
+                  </div>
+
+            </div>
+
+        </div>
+        <!--fine sezione card-->
+
+
+
+
+
+         <!--informazionisui viaggi-->
+        <h1 id="ilviaggio" class="text-center p-5 mb-5 mt-5">Riguardo le Destinazioni</h1>
+        <div class="row ">
+            <div class="col">
+                <div class="bg-primary text-center text-white mt-5 mb-5 p-5">
+                <h2>Tokio</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut obcaecati recusandae nesciunt voluptatum alias doloremque molestias. Totam, consequuntur doloremque reiciendis dicta pariatur ullam in maiores aut accusantium odio quisquam placeat!
+
+                </p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="bg-secondary text-center text-white mt-5 mb-5 p-5">
+            <h2>Kyoto</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut obcaecati recusandae nesciunt voluptatum alias doloremque molestias. Totam, consequuntur doloremque reiciendis dicta pariatur ullam in maiores aut accusantium odio quisquam placeat!
+
+            </p>
+        </div>
+    </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="bg-secondary text-center text-white mt-5 mb-5 p-5">
+                <h2>Nara</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut obcaecati recusandae nesciunt voluptatum alias doloremque molestias. Totam, consequuntur doloremque reiciendis dicta pariatur ullam in maiores aut accusantium odio quisquam placeat!
+
+                </p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="bg-primary text-center text-white mt-5 mb-5 p-5">
+            <h2>Osaka</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut obcaecati recusandae nesciunt voluptatum alias doloremque molestias. Totam, consequuntur doloremque reiciendis dicta pariatur ullam in maiores aut accusantium odio quisquam placeat!
+
+            </p>
+        </div>
+    </div>
+
+        </div>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--prezzi-->
+         <div class="container text-center p-5 mb-5 mt-5">
+        <table class="table table-dark table-striped">
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col"style="color:blue">Destinazione</th>
+                    <th scope="col"style="color:blue">Prezzo</th>
+                    <th scope="col"style="color:blue">Mese</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Tokio</th>
+                    <td>2000</td>
+                    <td>Ottobre</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Kyoto</th>
+                    <td>1800</td>
+                    <td>Novembre</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Nara</th>
+                    <td>1700</td>
+                    <td>Novembre</td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">Osaka</th>
+                    <td>1700</td>
+                    <td>Dicembre</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            
+           
+          </table>
+        </div>
+
+        <!--footer-->
+
+
+        <footer class="bg-dark mt-5 p-5 text-white text-center ">
+          <p>&copy;tour Giappone oggi </p>
+          <p> <a href="malito: abc@def.com" class="text-white"> inviaci un un Email &#9993</a></p>
+          
+          <a
+          class="btn btn-primary btn-lg btn-floating"
+          style="background-color: #F56040;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+
+        <a
+        class="btn btn-primary btn-lg btn-floating"
+        style="background-color: #3b5998;"
+        href="#!"
+        role="button"
+        ><i class="fab fa-facebook"></i
+      ></a>
+
+      <a
+      class="btn btn-primary btn-lg btn-floating"
+      style="background-color: #25d366;"
+      href="#!"
+      role="button"
+      ><i class="fab fa-whatsapp"></i
+    ></a>
+
+
+
+
+
+        </footer>
+
+
+
+
+
+  
+  
+  
+</body>
+</html>
+
+    
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
